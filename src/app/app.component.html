@@ -1,7 +1,7 @@
 <ng-container *ngFor="let item of items;index as i;">
     <div>
-        <input type="text" [(ngModel)]="item.value" #target>
-        <button type="button" (click)="add()" [disabled]="!target.value || i !== (items.length - 1)">add</button>
+        <input type="text" [(ngModel)]="item.value">
+        <button type="button" (click)="add()" [disabled]="!item.value || i !== (items.length - 1)">add</button>
         <button type="button" (click)="remove(i)">remove</button>
     </div>
 </ng-container>
